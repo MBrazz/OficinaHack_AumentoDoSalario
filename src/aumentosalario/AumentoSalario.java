@@ -5,6 +5,8 @@
  */
 package aumentosalario;
 
+import java.util.Scanner;
+
 /**
  *
  * @author mateu
@@ -22,11 +24,16 @@ public class AumentoSalario {
     FIM
     */
     public static void main(String[] args) {
-        float salarioInicial = 2000f;
+        System.out.println("Qual é o seu salário?");
+        Scanner lerSalario = new Scanner(System.in);
+                
+        float salarioInicial = lerSalario.nextFloat();
         float aumento = (salarioInicial * 15.3f) / 100;
         float salarioFinal = salarioInicial + aumento;
         
-        System.out.println("Seu novo salário é: R$ " + salarioFinal);
+        System.out.println("Seu salário inicial era: R$" + salarioInicial);
+        System.out.println("O valor do aumento é: R$" + aumento);
+        System.out.println("Seu novo salário é: R$" + salarioFinal);
     }
     
 }
